@@ -6,6 +6,7 @@ import { CovalentCoreModule } from '@covalent/core';
 import { CovalentHttpModule, IHttpInterceptor } from '@covalent/http';
 import { CovalentHighlightModule } from '@covalent/highlight';
 import { CovalentMarkdownModule } from '@covalent/markdown';
+import { CovalentDialogsModule } from '@covalent/core';
 
 import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
@@ -57,6 +58,7 @@ const httpInterceptorProviders: Type<any>[] = [
     EditorTemplateComponent,
   ], // directives, components, and pipes owned by this NgModule
   imports: [
+    CovalentDialogsModule, // or CovalentCoreModule (included inside of it)
     BrowserModule,
     BrowserAnimationsModule,
     CovalentCoreModule,

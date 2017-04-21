@@ -5,10 +5,12 @@
     <a md-icon-button mdTooltip="Docs" href="https://teradata.github.io/covalent/" target="_blank"><md-icon>chrome_reader_mode</md-icon></a>
     <a md-icon-button mdTooltip="Github" href="https://github.com/teradata/covalent" target="_blank"><md-icon svgIcon="assets:github"></md-icon></a>
   </div>
+  
+
   <div layout-gt-sm="row" tdMediaToggle="gt-xs" [mediaClasses]="['push-sm']">
     <div flex-gt-sm="60">
       <md-card>
-        <md-card-title>Products Sales</md-card-title>
+        <md-card-title>Products Saless dashboard.component</md-card-title>
         <md-card-subtitle>usage stats for our products</md-card-subtitle>
         <md-divider></md-divider>
         <div class="chart-height push-top push-right-sm">
@@ -27,6 +29,28 @@
           </ngx-charts-area-chart-stacked>
         </div>
       </md-card>
+	  
+      <md-card>
+        <md-card-title>Stacked Horizontal Bars</md-card-title>
+        <md-divider></md-divider>
+        <div style="height:250px;">
+          <ngx-charts-bar-horizontal-stacked
+            [scheme]="colorScheme"
+            [results]="multi"
+            [gradient]="gradient"
+            [xAxis]="showXAxis"
+            [yAxis]="showYAxis"
+            [legend]="showLegend"
+            [showXAxisLabel]="showXAxisLabel"
+            [showYAxisLabel]="showYAxisLabel"
+            [xAxisLabel]="xAxisLabel"
+            [xAxisTickFormatting]="axisDigits">
+          </ngx-charts-bar-horizontal-stacked>
+        </div>
+		
+
+      </md-card>
+	  
       <div layout="row">
         <div flex="33" layout="column">
           <md-card class="md-card-colored" flex>
@@ -65,8 +89,41 @@
           </md-card>
         </div>
       </div>
+	  
+	  
+	  <div layout="row">
+	  
+        <div flex="33" layout="column">
+          <md-card class="md-card-colored" flex>
+            <md-card-content class="text-center">
+	       		<button md-button color="accent" class="text-upper" (click)="openAlert()">open Alert</button>
+           </md-card-content>
+          </md-card>
+        </div>
+        <div flex="33" layout="column">
+          <md-card class="md-card-colored" flex>
+            <md-card-content class="text-center">
+	       		<button md-button color="accent" class="text-upper" (click)="openConfirm()">open Confirm</button>
+            </md-card-content>
+          </md-card>
+        </div>
+        <div flex="33" layout="column">
+          <md-card class="md-card-colored" flex>
+            <md-card-content class="text-center">
+	       		<button md-button color="accent" class="text-upper" (click)="openPrompt()">open Prompt</button>
+            </md-card-content>
+          </md-card>
+        </div>
+		
+      </div>
+	  
+	  
+	  
+	  
+	  
+	  
       <md-card>
-        <md-card-title>Customer Activity</md-card-title>
+        <md-card-title>Customer Activity dashboard.component</md-card-title>
         <md-card-subtitle>Recent activity from select members</md-card-subtitle>
         <md-divider></md-divider>
         <md-nav-list class="will-load item-list">
@@ -87,7 +144,7 @@
     </div>
     <div flex-gt-sm="40">
       <md-card>
-        <md-card-title>Alerts</md-card-title>
+        <md-card-title>Alerts dashboard.component</md-card-title>
         <md-card-subtitle>Items requiring attention</md-card-subtitle>
         <md-divider></md-divider>
         <md-list class="will-load alert-list">
@@ -110,7 +167,7 @@
         </md-card-actions>
       </md-card>
       <md-card id="dashboard-favorites-card" class="push-top">
-        <md-card-title>Favorites</md-card-title>
+        <md-card-title>Favorites dashboard.component</md-card-title>
         <md-card-subtitle>Your favorite products</md-card-subtitle>
         <md-divider></md-divider>
         <md-nav-list class="will-load favorite-list">
@@ -134,6 +191,9 @@
       </md-card>
     </div>
   </div>
+  
+  
+  
   <td-layout-footer>
     <div layout="row" layout-align="start center">
       <span class="md-caption">Copyright &copy; 2016 Teradata. All rights reserved</span>
